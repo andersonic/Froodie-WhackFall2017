@@ -14,7 +14,6 @@ def start_json_file():
 def read_database():
     f = open(filename, 'r')
     fileText = f.read()
-    print fileText
     data = json.loads(fileText)
     f.close()
     return data
@@ -40,20 +39,29 @@ def get_location_list():
 def home():
     return render_template('index.html')
 
+@app.route('/getlocation')
+def getlocation():
+    return render_template('getlocation.html')
+
 @app.route('/havefood')
 def havefood():
     return render_template('havefood.html')
 
-@app.route('/wantfood')
+@app.route('/wantfood', methods=['POST'])
 def wantfood(source = None):
+    theirLocation = request.form['yourlocation'].replace(" ", "+")
+    print theirLocation
     data = read_database()
     foodLocations = ""
     for food in data:
-        foodLocations += food['location'] + '|'
-    image = "https://maps.googleapis.com/maps/api/staticmap?center=Brooklyn+Bridge,New+York,NY&zoom=13&size=600x300&maptype=roadmap"\
-            + "&markers=color:yellow%7Clabel:F%7C"\
+        location = food['location'].replace(" ", "+")
+        foodLocations += location + '|'
+    image = "https://maps.googleapis.com/maps/api/staticmap?center="\
+            + theirLocation + "&zoom=13&size=600x300&maptype=roadmap"\
+            + "&markers=color:red%7Clabel:F%7C"\
             + foodLocations\
             + "&key=AIzaSyDEcCaNT7FKxd2p7DO37MuzS1NLsI59H10"
+    print image
     return render_template('wantfood.html', source = image)
 
 @app.route('/foodsubmission', methods=['POST'])
