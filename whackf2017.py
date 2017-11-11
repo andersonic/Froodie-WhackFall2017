@@ -18,8 +18,8 @@ def read_database():
     f.close()
     return data
 
-def add_location(currentLocation):
-    data = {"location": currentLocation, "time": get_current_time()}
+def add_location(currentLocation, numServings):
+    data = {"location": currentLocation, "time": get_current_time(), "servings":numServings}
     oldData = read_database()
     oldData.append(data)
     with open(filename, 'w') as data_file:
@@ -34,6 +34,21 @@ def get_location_list():
     for location in data:
         locations.append(location['location'])
     return locations
+
+def decrement_servings(locationToDecrement):
+    oldData = read_database()
+    currentIndex = 0
+    index = -1
+    for datapoint in oldData:
+        if datapoint['location'] == locationToDecrement:
+            index = currentIndex
+        currentIndex += 1
+    if index != -1:
+        oldData[index]['servings'] -= 1
+    if oldData[index]['servings'] <= 0:
+        del oldData[index]
+    with open(filename, 'w') as data_file:
+        json.dump(oldData, data_file)
 
 @app.route('/')
 def home():
@@ -61,13 +76,13 @@ def wantfood(source = None):
             + "&markers=color:red%7Clabel:F%7C"\
             + foodLocations\
             + "&key=AIzaSyDEcCaNT7FKxd2p7DO37MuzS1NLsI59H10"
-    print image
     return render_template('wantfood.html', source = image)
 
 @app.route('/foodsubmission', methods=['POST'])
 def foodsubmission():
     location = request.form['location']
-    add_location(location)
+    servings = request.form['servings']
+    add_location(location, servings)
     return render_template('responsereceived.html')
 
 if __name__ == '__main__':
