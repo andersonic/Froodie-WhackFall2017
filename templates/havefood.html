@@ -1,19 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Hind+Guntur" rel="stylesheet">
     <meta charset="UTF-8">
-    <title>Donate Food</title>
+    <title>Drop Off</title>
+    <style>
+        body
+        {
+            font-family: "Hind Gunter", sans-serif;
+            font-size: 100px;
+            text-align: center;
+            background-color: orange;
+            font-color:white;
+        }
+
+        input
+        {
+            width: 500px;
+            height: 100px;
+            border: 0px solid #999999;
+            padding: 5px;
+            font-color:white;
+            margin:0px;
+        }
+
+        input[type="text"]
+        {
+            font-size: 80px;
+            color:black;
+            margin:0px;
+            border:0px;
+        }
+
+        input[type="number"]
+        {
+            font-size: 80px;
+            color:black;
+            margin:0px;
+            border:0px;
+        }
+
+        input[type="submit"]
+        {
+            font-size: 25px;
+            height: 50px;
+            width: 250px;
+            color:black;
+        }
+    </style>
 </head>
 <body>
 
+<div>
+    <img src="https://snag.gy/QLTJNa.jpg" height= 80% />
+    <img src="https://snag.gy/FmgS3J.jpg" height= 80%/>
+</div>
+
+
 <form action="/foodsubmission" method="post">
-    Location:<br>
-    <input type="text" name="location">
+    Location
     <br>
-    Servings:<br>
+    <input type="text" name="location"> <br>
+    <br>
+    Servings:
+    <br>
     <input type="number" name="servings">
-    <input type="submit" value="Submit">
+    <br>
+    <input type="submit" value="Submit" style="font-size:30pt;color:black;background-color:white;border:2px solid #336600;padding:3px">
 </form>
 
+<div>
+    <img src="https://snag.gy/6Gvtba.jpg" width= 50%/>
+    <img src="https://snag.gy/FCzPh7.jpg" height= 300px/>
+</div>
 </body>
 </html>
