@@ -1,1 +1,1 @@
-web: python whackf2017.py
+web: gunicorn whackf2017:app
