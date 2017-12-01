@@ -1,13 +1,14 @@
 # whackfall2017
-Project for WHACK fall 2017
+Project for WHACK Fall 2017
+
 ## Inspiration
 One night in New York City, we saw a man eating a raw chicken leg out of a garbage bag. We realized that large institutions, 
 such as colleges and universities, compost huge amounts of relatively safe, edible food at the end of each day. We wanted to 
 come up with an easy way for such large institutions to make this food available to people in need, while also accommodating s
 maller drops of food left over from events. From a social standpoint, we hope to reduce extreme hunger and allow people who 
-can’t afford food to eat relatively fresh and presentable food, affording them greater dignity than dumpster diving. Our 
-ecological goal is to eliminate food waste in America. Therefore, we decided to create a web app called Froodie, a portmanteau 
-of the words “free” and “food.”
+can’t afford food to eat relatively fresh and presentable food, affording them greater dignity than dumpster diving. Our  
+ecological goal is to eliminate food waste in America. Therefore, we decided to create a web app called Froodees, a portmanteau
+of the words “free” and “foods.”
 
 ## What it does
 Upon navigating to the website, a person can indicate that they have food they are looking to get rid or or that they are 
