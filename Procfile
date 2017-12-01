@@ -1,1 +1,1 @@
-web: gunicorn whackf2017:app
+web: gunicorn froodie:app --log-file=-
