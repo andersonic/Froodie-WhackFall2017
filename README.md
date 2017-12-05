@@ -1,13 +1,14 @@
-# whackfall2017
-Project for WHACK fall 2017
+# Froodie
+Project for WHACK Fall 2017. Jun Ru Anderson, Marinn Cedillo, Rachel Navarrette, Sandra Xu
+
 ## Inspiration
 One night in New York City, we saw a man eating a raw chicken leg out of a garbage bag. We realized that large institutions, 
 such as colleges and universities, compost huge amounts of relatively safe, edible food at the end of each day. We wanted to 
 come up with an easy way for such large institutions to make this food available to people in need, while also accommodating s
 maller drops of food left over from events. From a social standpoint, we hope to reduce extreme hunger and allow people who 
-can’t afford food to eat relatively fresh and presentable food, affording them greater dignity than dumpster diving. Our 
-ecological goal is to eliminate food waste in America. Therefore, we decided to create a web app called Froodie, a portmanteau 
-of the words “free” and “food.”
+can’t afford food to eat relatively fresh and presentable food, affording them greater dignity than dumpster diving. Our  
+ecological goal is to eliminate food waste in America. Therefore, we decided to create a web app called Froodees, a portmanteau
+of the words “free” and “foods.”
 
 ## What it does
 Upon navigating to the website, a person can indicate that they have food they are looking to get rid or or that they are 
@@ -22,21 +23,21 @@ Google Maps API, a static image of the person’s vicinity is displayed. This im
 food left at them.
 
 ## How we built it
-The front-end templates were built with HTML and CSS. We used Canva, an poster/ logo making website, where I created each 
+The front-end templates were built with HTML and CSS. We used Canva, an poster/ logo making website, where we created each
 graphic and uploaded the pictures as URL’s that can be embedded into the HTML code. We used a google font to make the written 
-portion consist and aesthetically pleasing. The back-end was built with Flask. At present, Froodie is run from localhost.
+portion consist and aesthetically pleasing. The back-end was built with Flask. Froodie was deployed using Heroku.
 
 ## Challenges we ran into
 We ran into many obstacles in building this application, such as being able to display a user’s location who was seeking food 
-relative to locations where food was dropped off. We had to figure out a way to use Google Maps API in order to do so, 
+relative to locations where food was dropped off. We had to figure out a way to use Google Maps API in order to do so;
 although we began by attempting to have a dynamic map that moved and was interactive, we were unable to integrate the server 
 aspect as well. In order to still be able to display a map along with the information we wanted, we settled into using a 
 static image that was generated using a user’s location. 
 
 ## Accomplishments that we're proud of
 The accomplishment that we’re most proud of is using Flask, which is new to all of us, to create the back-end of our webapp 
-and run it, albeit from localhost. We also learned how to use Javascript to add the Google Maps API. We are very proud of the 
-fact that Froodie is functional; we are also proud of the images and design of the site.
+and run it. We also learned how to use Javascript to add the Google Maps API. We are very proud of the
+fact that Froodie is functional and deployed; we are also proud of the images and design of the site.
 
 ## What we learned
 Every member of this team learned a new skill this weekend. For some, it was HTML, for others, CSS or Javascript, and for 
